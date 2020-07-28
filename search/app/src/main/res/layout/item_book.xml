@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#5664FF"
+    android:padding="15sp">
+<ImageView
+    android:id="@+id/image2"
+    android:layout_width="70sp"
+    android:layout_height="50sp"
+    android:src="@drawable/ic_arrow_downward_black_24dp"
+
+    />
+    <TextView
+        android:id="@+id/title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="책제목"
+        android:layout_toRightOf="@id/image2"
+        android:textColor="#ffffff"
+        />
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="저자"
+        android:layout_toRightOf="@id/image2"
+        android:layout_below="@id/title4"
+        android:textColor="#ffffff"
+        />
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가격"
+        android:layout_toRightOf="@id/image2"
+        android:layout_below="@id/author"
+        android:textColor="#ffffff"
+        />
+    <ImageView
+        android:id="@+id/showmore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pageview_black_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/author"/>
+
+</RelativeLayout>
