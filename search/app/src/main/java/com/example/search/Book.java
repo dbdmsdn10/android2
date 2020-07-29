@@ -63,16 +63,19 @@ public class Book extends AppCompatActivity {
                 break;
             case R.id.blog:
                 intent.putExtra("url","https://openapi.naver.com/v1/search/blog.json");
+                intent.putExtra("title","블로그검색");
                 startActivity(intent);
                 finish();
                 break;
             case R.id.news:
                 intent.putExtra("url","https://openapi.naver.com/v1/search/news.json");
+                intent.putExtra("title","뉴스검색");
                 startActivity(intent);
                 finish();
                 break;
             case R.id.cafe:
                 intent.putExtra("url","https://openapi.naver.com/v1/search/cafearticle.json");
+                intent.putExtra("title","카페검색");
                 startActivity(intent);
                 finish();
                 break;

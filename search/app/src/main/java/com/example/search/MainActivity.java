@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             String url2 = intent2.getStringExtra("url");
             if (url != null && !url2.equals("")) {
                 url = url2;
+                getSupportActionBar().setTitle(intent2.getStringExtra("title"));
             }
         } catch (Exception e) {
         }
