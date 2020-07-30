@@ -36,8 +36,8 @@ ViewPager pager;
         ad=new PagerAdapter(getSupportFragmentManager(),0);
         pager=findViewById(R.id.pager);
         pager.setAdapter(ad);
-        pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab));
-        tab.setOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
+        pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab));//이동시 동기화
+        tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 pager.setCurrentItem(tab.getPosition());
