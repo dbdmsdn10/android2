@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "817623339057",
+    "firebase_url": "https://fir-memo-b6b14.firebaseio.com",
+    "project_id": "fir-memo-b6b14",
+    "storage_bucket": "fir-memo-b6b14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817623339057:android:ee7ab2bcc2875a21d30510",
+        "android_client_info": {
+          "package_name": "com.example.firebasememo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817623339057-dbciub9b2qq9ng17bm8it6s43j36h647.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFxUFzA0b6sKFQRU2HUD2Av1BbUdFn_Y8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817623339057-dbciub9b2qq9ng17bm8it6s43j36h647.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

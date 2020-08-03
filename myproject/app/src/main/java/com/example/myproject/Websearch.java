@@ -38,7 +38,7 @@ public class Websearch extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_websearch);
         ImageView serchbtn = findViewById(R.id.searchbtn2);
-
+        getSupportActionBar().setTitle("검색창");
         serchbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

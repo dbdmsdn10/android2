@@ -14,7 +14,7 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-
+        getSupportActionBar().setTitle("메인창");
     }
 
     public void mclick(View view) {
@@ -26,6 +26,10 @@ public class Main2Activity extends AppCompatActivity {
                 break;
             case R.id.mapbtn:
                 intent=new Intent(Main2Activity.this, MapsActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btndayreview:
+                intent=new Intent(Main2Activity.this, DayReview.class);
                 startActivity(intent);
                 break;
         }

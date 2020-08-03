@@ -109,10 +109,12 @@
         android:orientation="horizontal"
         android:layout_marginTop="30sp">
         <Button
+            android:id="@+id/btndayreview"
             android:layout_width="0sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="식단 조회및 입력"/>
+            android:text="식단 조회및 입력"
+            android:onClick="mclick"/>
         <Button
             android:layout_width="0sp"
             android:layout_height="wrap_content"
