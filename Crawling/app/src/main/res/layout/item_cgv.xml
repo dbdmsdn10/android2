@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20sp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#6FFFD9D9"
+    android:elevation="5sp"
+    >
+    <TextView
+        android:id="@+id/rank2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="순위출력"
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="제목출력"
+        android:textSize="20sp"
+        />
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="200sp"
+        android:layout_height="250sp"
+        android:src="@drawable/ic_launcher_background"/>
+</LinearLayout>
