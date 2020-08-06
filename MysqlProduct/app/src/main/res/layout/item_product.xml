@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10sp"
+    android:layout_margin="10sp"
+    android:background="#CBFFF3"
+    android:id="@+id/item"
+    >
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:src="@drawable/ic_launcher_background"
+        />
+    <TextView
+        android:id="@+id/txtcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상품코드"
+        android:layout_toRightOf="@+id/image2"/>
+    <TextView
+        android:id="@+id/txtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상품 이름"
+        android:layout_below="@id/txtcode"
+        android:layout_toRightOf="@id/image2"
+        />
+    <TextView
+        android:id="@+id/txtprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상품 가격"
+        android:layout_below="@id/txtname"
+        android:layout_toRightOf="@id/image2"
+        />
+
+    <ImageView
+        android:id="@+id/btndel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_delete_black_24dp"
+        android:layout_below="@id/txtcode"
+        />
+
+
+</RelativeLayout>
