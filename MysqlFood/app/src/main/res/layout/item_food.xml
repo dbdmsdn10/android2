@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15sp"
+    android:layout_margin="10sp"
+    android:background="#8DFDDA"
+    >
+    <TextView
+        android:id="@+id/txtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="이름"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:id="@+id/txttel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="전화번호"
+        android:layout_below="@id/txtname"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:id="@+id/txtaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="주소"
+        android:layout_below="@id/txttel"
+        android:textSize="15sp"
+        />
+    <ImageView
+        android:id="@+id/btnlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_location_on_black_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtname"
+        />
+
+</RelativeLayout>

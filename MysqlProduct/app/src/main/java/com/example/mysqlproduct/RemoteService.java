@@ -16,7 +16,7 @@ import retrofit2.http.Query;
 
 
 public interface RemoteService {
-    public static final String base_url="http://192.168.137.1:8889/product/";
+    public static final String base_url="http://192.168.0.5:8889/product/";
 
     @GET("productinfo.jsp")
     Call<List<ProductVO>> listProduct();
@@ -33,5 +33,8 @@ public interface RemoteService {
             @Part("pname") RequestBody strPname,
             @Part("price") RequestBody strPrice,
             @Part MultipartBody.Part image);
+
+    @GET("delete.jsp")
+    Call<Void> delete(@Query("code") String code);
 
 }

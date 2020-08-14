@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/maplistlayout"
+    >
+<TextView
+    android:id="@+id/txtlocalname"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="지명"
+    android:textSize="25sp"
+
+    />
+    <TextView
+        android:id="@+id/txtaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="주소"
+        android:textSize="20sp"
+        android:layout_below="@id/txtlocalname"
+        />
+    <TextView
+        android:id="@+id/contactnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="전화번호"
+        android:textSize="20sp"
+        android:layout_below="@id/txtaddress"
+        />
+</RelativeLayout>

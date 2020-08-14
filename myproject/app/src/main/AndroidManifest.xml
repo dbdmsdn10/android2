@@ -18,7 +18,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DayTab"></activity>
+        <activity android:name=".PastReview"></activity>
+        <activity android:name=".ExerciseList" />
+        <activity android:name=".Exercise" />
+        <activity android:name=".Userinfo" />
+        <activity android:name=".Userinfo2" />
+        <activity android:name=".AddFood">
+
+        </activity>
+        <activity android:name=".DayTab" />
         <activity android:name=".DayReview" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -37,14 +45,14 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".web" />
         <activity android:name=".Websearch" />
-        <activity android:name=".Main2Activity">
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

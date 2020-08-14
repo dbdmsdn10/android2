@@ -1,184 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="90sp"
+    android:layout_marginBottom="40sp"
+    android:orientation="vertical"
     android:textSize="20sp">
 
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/statis"
-        android:layout_marginTop="20sp"
-        android:layout_marginRight="50sp"
-        android:text="종료"
-        android:textSize="20sp"/>
-
-    <TextView
-        android:id="@+id/work"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/penalty"
-        android:layout_alignLeft="@id/penalty"
-        android:layout_marginTop="20sp"
-        android:text="운동양"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/have"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/recommand"
-        android:layout_alignLeft="@id/recommand"
-
-        android:layout_marginTop="20dp"
-        android:text="먹은양"
-        android:textSize="20sp"
-
-        />
-
-    <TextView
-        android:id="@+id/recommand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="40sp"
-        android:text="권장칼로리"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/penalty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/have"
-        android:layout_alignLeft="@id/have"
-        android:layout_marginTop="20sp"
-        android:text="과식패널티"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/recommandkal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/recommand"
-        android:layout_marginLeft="80sp"
-        android:layout_toRightOf="@id/recommand"
-        android:text="숫자"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/penaltykal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/havekal"
-        android:layout_alignLeft="@id/havekal"
-        android:layout_marginTop="20sp"
-        android:text="숫자"
-
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/havekal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/recommandkal"
-        android:layout_alignLeft="@id/recommandkal"
-        android:layout_marginTop="20sp"
-        android:text="숫자"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/penaltykal"
-        android:layout_alignLeft="@id/penaltykal"
-
-        android:layout_marginTop="20sp"
-        android:text="숫자"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/work"
-        android:layout_alignLeft="@id/work"
-        android:layout_marginTop="20sp"
-        android:text="남은 칼로리양"
-        android:textSize="20sp"
-        />
-
-    <TextView
-        android:id="@+id/totalleft"
+    <EditText
+        android:id="@+id/txtid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView9"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="23dp"
-        android:gravity="center"
-        android:text="TextView"
-        android:textSize="60sp" />
+        android:layout_margin="30sp"
+        android:hint="id"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/txtpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textSize="30sp" />
 
     <Button
-        android:id="@+id/insert"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnregist"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/totalleft"
-        android:layout_marginLeft="50sp"
-        android:layout_marginTop="20sp"
-        android:text="식단조회 및 입력"
-        android:textSize="20sp"/>
-
-    <Button
-        android:id="@+id/workbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/totalleft"
-        android:text="운동시작"
-        android:layout_marginTop="20sp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="50sp"
+        android:layout_gravity="center"
+        android:layout_margin="30sp"
+        android:text="회원가입"
         android:textSize="20sp"
+        android:onClick="mclick"
         />
 
     <Button
-        android:id="@+id/infoedit"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnlogin"
         android:layout_height="wrap_content"
-        android:layout_below="@id/insert"
-        android:layout_marginLeft="50sp"
-        android:layout_marginTop="20sp"
-        android:text="개인정보수정"
-        android:textSize="20sp"/>
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:text="로그인"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:onClick="mclick"/>
 
     <Button
-        android:id="@+id/statis"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnfinish"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/workbtn"
-        android:layout_marginRight="50sp"
-        android:layout_marginTop="20sp"
-        android:text="통계"
-        android:textSize="20sp"/>
+        android:layout_margin="30sp"
+        android:text="취소 및 종료"
+        android:textSize="20sp"
+        android:onClick="mclick"/>
 
-    <Button
-        android:id="@+id/Lookup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/infoedit"
-        android:layout_marginLeft="50sp"
-        android:layout_marginTop="20sp"
-        android:text="과거조회"
-        android:textSize="20sp"/>
-</RelativeLayout>
+
+</LinearLayout>

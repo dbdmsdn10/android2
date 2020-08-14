@@ -1,64 +1,60 @@
 package com.example.myproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link lunch#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class lunch extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    String stremail;
+    TabAdapter adapter;
+    String date;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public lunch() {
-        // Required empty public constructor
+    public void setDate(String date) {
+        this.date = date;
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment lunch.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static lunch newInstance(String param1, String param2) {
-        lunch fragment = new lunch();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public lunch(String stremail) {
+        this.stremail = stremail;
     }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lunch, container, false);
+        View view=inflater.inflate(R.layout.fragment_lunch, container, false);
+
+        RecyclerView list=view.findViewById(R.id.lunchlist);
+        LayoutInflater layoutInflater =getLayoutInflater();
+         adapter=new TabAdapter(2,list,getActivity(),stremail,layoutInflater);
+        Button btnadd=view.findViewById(R.id.btnlunch);
+        if(date!=null){
+            adapter.setTime2(date);
+            btnadd.setVisibility(View.INVISIBLE);
+        }
+        adapter.run();
+
+
+        btnadd.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view2) {
+                Intent intent=new Intent(getActivity(),AddFood.class);
+                intent.putExtra("stremail",stremail);
+                intent.putExtra("wheneat",2);
+                startActivityForResult(intent,1);
+            }
+        });
+        return view;
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        adapter.run();
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

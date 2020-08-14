@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -365,6 +366,7 @@ public class KakaoThread extends AsyncTask<String, String, String> {
             }
         }
     }
+
 }
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <item
-    android:id="@+id/info"
+    android:id="@+id/editinfo"
     android:title="개인정보 수정"
     />
     <item

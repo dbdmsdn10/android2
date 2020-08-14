@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="30sp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘한 운동량"
+        />
+
+    <TextView
+        android:id="@+id/dayexcercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kcal"
+        android:textSize="20sp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/exerciselist"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        />
+    <Button
+        android:id="@+id/btndo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="운동 더하기"
+        />
+</LinearLayout>

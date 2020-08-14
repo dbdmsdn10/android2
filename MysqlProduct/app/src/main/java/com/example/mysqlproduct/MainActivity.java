@@ -2,8 +2,10 @@ package com.example.mysqlproduct;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -72,7 +75,7 @@ String strquery="";
             @Override
             public void onResponse(Call<List<ProductVO>> call, Response<List<ProductVO>> response) {
                 arrayproduct=response.body();
-                //System.out.println("갯수"+arrayproduct.size());
+                System.out.println("갯수"+arrayproduct.size());
                 productAdapter.notifyDataSetChanged();
             }
 
@@ -124,7 +127,36 @@ String strquery="";
                     startActivityForResult(intent,1);
                 }
             });
-            
+
+            ImageView btndel=view.findViewById(R.id.btndel);
+            btndel.setOnClickListener(new ImageView.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    AlertDialog.Builder box=new AlertDialog.Builder(MainActivity.this);
+                    box.setTitle("알림");
+                    box.setMessage("삭제하시겠습니까?");
+                    box.setPositiveButton("예", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Call<Void> call=remoteService.delete(productVO.getCode());
+                            call.enqueue(new Callback<Void>() {
+                                @Override
+                                public void onResponse(Call<Void> call, Response<Void> response) {
+                                    callData(strorder,strquery);
+                                }
+
+                                @Override
+                                public void onFailure(Call<Void> call, Throwable t) {
+                                    System.out.println("삭제오류");
+                                }
+                            });
+                        }
+                    });
+                    box.setNegativeButton("아니오",null);
+                    box.show();
+                }
+            });
+
             return view;
         }
     }

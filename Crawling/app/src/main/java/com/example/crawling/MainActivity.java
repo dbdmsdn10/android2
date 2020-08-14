@@ -119,11 +119,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
-            String part=arrayDaum.get(index).get("part");
-            String temper=arrayDaum.get(index).get("temper");
-            String wa=arrayDaum.get(index).get("wa");
-            String ico=arrayDaum.get(index).get("ico");
-            getSupportActionBar().setTitle(part +"   "+ temper +"c   "+ ico);
+            HashMap<String,String> map=arrayDaum.get(index);
+            String part=map.get("part");
+            String temper=map.get("temper");
+
+            String ico=map.get("ico");
+            getSupportActionBar().setTitle(part +"   "+ temper +"°C   "+ ico);
         }
     };
 }
